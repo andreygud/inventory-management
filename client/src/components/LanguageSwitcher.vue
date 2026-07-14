@@ -100,12 +100,14 @@ const selectLanguage = (locale) => {
   padding: 0.5rem 0.875rem;
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  border-radius: var(--radius-control, 6px);
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: inherit;
   font-size: 0.875rem;
-  color: #334155;
+  color: var(--slate-dark, #475569);
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .language-button:hover {
@@ -134,14 +136,16 @@ const selectLanguage = (locale) => {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  bottom: calc(100% + 0.5rem);
+  left: 0;
   right: 0;
+  top: auto;
   min-width: 160px;
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border-radius: var(--radius-surface, 10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: var(--z-dropdown, 1000);
   overflow: hidden;
 }
 
@@ -160,7 +164,7 @@ const selectLanguage = (locale) => {
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #334155;
+  color: var(--slate-dark, #475569);
 }
 
 .dropdown-item:hover {
