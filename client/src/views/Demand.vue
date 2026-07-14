@@ -234,25 +234,26 @@ export default {
 .trend-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 1.5rem;
+  border-radius: var(--radius-surface, 10px);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-rest, 0 1px 3px rgba(0, 0, 0, .05));
   transition: all 0.2s ease;
 }
 
 .trend-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-hover, 0 4px 12px rgba(0, 0, 0, .06));
 }
 
 .increasing-card {
-  border-left: 4px solid #10b981;
+  border-left: 4px solid var(--success, #059669);
 }
 
 .stable-card {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--accent, #2563eb);
 }
 
 .decreasing-card {
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--danger, #dc2626);
 }
 
 .trend-header {

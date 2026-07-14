@@ -18,6 +18,7 @@ Use the Task tool with these specialized subagents for appropriate tasks:
 
 ### Skills
 - **backend-api-test** skill: Use when writing or modifying tests in `tests/backend` directory with pytest and FastAPI TestClient
+- **sidebar-redesign** skill: Use when asked to convert the top nav to a left sidebar or give the client a "modern SaaS" redesign
 
 ### MCP Tools
 - **ALWAYS use GitHub MCP tools** (`mcp__github__*`) for ALL GitHub operations
@@ -47,6 +48,9 @@ npm install && npm run dev
 **Filter System**: 4 filters (Time Period, Warehouse, Category, Order Status) apply to all data via query params
 **Data Flow**: Vue filters → `client/src/api.js` → FastAPI → In-memory filtering → Pydantic validation → Computed properties
 **Reactivity**: Raw data in refs (`allOrders`, `inventoryItems`), derived data in computed properties
+
+## Coding Conventions
+- Always document non-obvious logic changes with comments
 
 ## API Endpoints
 - `GET /api/inventory` - Filters: warehouse, category

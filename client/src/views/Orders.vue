@@ -172,35 +172,12 @@ export default {
 </script>
 
 <style scoped>
-/* Fixed table layout to prevent column shifting */
+/* Auto table layout so columns size to content and shrink with the
+   narrower content area introduced by the permanent left sidebar.
+   Horizontal overflow is handled by .table-container { overflow-x: auto }. */
 .orders-table {
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
-}
-
-/* Column widths */
-.col-order-number {
-  width: 130px;
-}
-
-.col-customer {
-  width: 180px;
-}
-
-.col-items {
-  width: 200px;
-}
-
-.col-status {
-  width: 130px;
-}
-
-.col-date {
-  width: 140px;
-}
-
-.col-value {
-  width: 120px;
 }
 
 /* Items details styling */
